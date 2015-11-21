@@ -1,0 +1,17 @@
+{ "name": "melilib"
+, "description": "Combines JSON files in one"
+, "keywords": [ "javascript", "json" ]
+, "version": "0.0.1alpha"
+, "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)"
+, "repository": { "type": "git", "url": "git://github.com/ajlopez/MeliLib.git" }
+, "main": "./lib/melilib.js"
+, "engines": { "node": ">= 0.10.0" }
+, "scripts": {
+    "test": "simpleunit ./test"
+  }
+, "dependencies": {
+  }
+, "devDependencies": {
+    "simpleunit": "0.0.6"
+  }
+}
