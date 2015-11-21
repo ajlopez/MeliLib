@@ -14,3 +14,16 @@ exports['get sites'] = function (test) {
     });    
 };
 
+exports['get site'] = function (test) {
+    test.async();
+    
+    melilib.getSite('MLA', function (err, data) {
+        test.equal(err, null);
+        test.ok(data);
+        test.equal(data.id, "MLA");
+        test.equal(data.name, "Argentina");
+        test.equal(data.country_id, "AR");
+        test.done();
+    });    
+};
+
