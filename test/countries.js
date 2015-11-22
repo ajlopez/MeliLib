@@ -13,3 +13,20 @@ exports['get countries'] = function (test) {
         test.done();
     });    
 };
+
+exports['get country'] = function (test) {
+    test.async();
+    
+    melilib.getCountry("AR", function (err, data) {
+        test.equal(err, null);
+        test.ok(data);
+        test.equal(data.id, "AR");
+        test.equal(data.name, "Argentina");
+        
+        test.ok(data.states);
+        test.ok(Array.isArray(data.states));
+        test.ok(data.states.length);
+        
+        test.done();
+    });    
+};
