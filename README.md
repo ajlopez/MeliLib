@@ -2,6 +2,10 @@
 
 Library to access Mercado Libre public API, WIP
 
+## References
+
+- (Mercado Libre API Directory)[http://developers.mercadolibre.com/api-directory]
+
 ## Contribution
 
 Feel free to [file issues](https://github.com/ajlopez/MeliLib) and submit
