@@ -18,3 +18,23 @@ exports['get site categories'] = function (test) {
         test.done();
     });
 }
+
+exports['get category'] = function (test) {
+    test.async();
+    
+    melilib.getCategory('MLA5725', function (err, data) {
+        test.ok(!err);
+        test.ok(data);
+
+        test.equal(data.id, 'MLA5725');
+        test.equal(data.name, "Accesorios para Vehículos");
+        
+        test.ok(data, data.children_categories);
+        test.ok(Array.isArray(data.children_categories));
+        test.ok(data.children_categories.length);
+        
+        sl.all(data.children_categories, function (cat) { return cat.id && cat.name && cat.total_items_in_this_category; });
+        
+        test.done();
+    });
+}
